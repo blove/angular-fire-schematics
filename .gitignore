@@ -1,0 +1,27 @@
+# Outputs
+src/**/*.js
+!src/**/files/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+
+# IDEs
+.idea/
+jsconfig.json
+.vscode/
+
+# Misc
+node_modules/
+npm-debug.log*
+yarn-error.log*
+*.todo
+
+# Mac OSX Finder files.
+**/.DS_Store
+.DS_Store
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "angular-firebase-schematic-ng-add",
+  "title": "Angular Firebase ng-add schematic",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "apiKey": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase API key",
+      "x-prompt": "What is your project's apiKey?"
+    },
+    "authDomain": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase domain",
+      "x-prompt": "What is your project's authDomain?"
+    },
+    "databaseURL": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase database URL",
+      "x-prompt": "What is your project's databaseURL?"
+    },
+    "projectId": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase project ID",
+      "x-prompt": "What is your project's id?"
+    },
+    "storageBucket": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase storage bucket",
+      "x-prompt": "What is your project's storageBucket?"
+    },
+    "messagingSenderId": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase message sender ID",
+      "x-prompt": "What is your project's messagingSenderId?"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
