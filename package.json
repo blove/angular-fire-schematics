@@ -1,18 +1,22 @@
 {
-  "name": "angular-fire-schematic",
-  "version": "0.0.0",
-  "description": "A blank schematics",
+  "name": "angular-fire-schematics",
+  "version": "0.0.0-development",
+  "description": "AngularFire Schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "git checkout HEAD -- sandbox && git clean -f -d sandbox",
     "link:schematic": "yarn link && cd sandbox && yarn link \"angular-fire-schematic\"",
     "sandbox:add": "cd sandbox && ng g angular-fire-schematic:add",
     "test": "yarn clean && yarn sandbox:add && yarn test:sandbox",
+    "test:ci": "yarn clean && cd sandbox && yarn && ng g angular-fire-schematic:add --apiKey='' --authDomain='' --databaseURL='' --projectId='' --storageBucket='' --messagingSenderId='' && yarn lint && yarn build",
     "test:unit": "yarn build && jasmine src/**/*_spec.js",
-    "test:sandbox": "cd sandbox && yarn lint && yarn test --watch=false && yarn build"
+    "test:sandbox": "cd sandbox && yarn lint && yarn test && yarn build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
-    "schematics"
+    "schematics",
+    "AngularFire",
+    "ng-add"
   ],
   "author": "Brian Love",
   "license": "MIT",
@@ -34,5 +38,9 @@
   "devDependencies": {
     "@angular-devkit/schematics-cli": "^0.11.3",
     "semantic-release": "^15.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blove/angular-fire-schematics.git"
   }
 }

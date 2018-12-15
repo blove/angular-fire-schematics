@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - 8
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - travis_retry npm install
+
+before_script:
+  - yarn link:schematic
+
+  script:
+  - yarn test:ci
