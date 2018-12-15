@@ -1,6 +1,6 @@
 {
   "name": "angular-fire-schematics",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "AngularFire Schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
