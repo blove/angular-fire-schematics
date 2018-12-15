@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "git checkout HEAD -- sandbox && git clean -f -d sandbox",
+    "commit": "git-cz",
     "link:schematic": "yarn link && cd sandbox && yarn link \"angular-fire-schematic\"",
     "sandbox:add": "cd sandbox && ng g angular-fire-schematic:add",
     "test": "yarn clean && yarn sandbox:add && yarn test:sandbox",
@@ -37,10 +38,17 @@
   },
   "devDependencies": {
     "@angular-devkit/schematics-cli": "^0.11.3",
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "2.1.0",
     "semantic-release": "^15.13.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/blove/angular-fire-schematics.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

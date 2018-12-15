@@ -33,7 +33,11 @@ function addPackageJsonDependencies(): Rule {
           overwrite: false
         };
         addPackageJsonDependency(tree, nodeDependency);
-        _context.logger.debug('✅️ Added dependency');
+        _context.logger.info(
+          `✅️ Added dependency: ${npmRegistryPackage.name}@${
+            npmRegistryPackage.version
+          }`
+        );
         return tree;
       })
     );
@@ -43,7 +47,7 @@ function addPackageJsonDependencies(): Rule {
 function installDependencies(): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     _context.addTask(new NodePackageInstallTask());
-    _context.logger.debug('✅️ Dependencies installed');
+    _context.logger.info('✅️ Dependencies installed');
     return tree;
   };
 }
