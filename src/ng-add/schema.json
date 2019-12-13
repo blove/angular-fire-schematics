@@ -46,6 +46,12 @@
       "default": "",
       "description": "Your Firebase message sender ID",
       "x-prompt": "What is your project's messagingSenderId?"
+    },
+    "appId": {
+      "type": "string",
+      "default": "",
+      "description": "Your Firebase app ID",
+      "x-prompt": "What is your project's appId?"
     }
   },
   "required": [],

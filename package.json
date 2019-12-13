@@ -9,7 +9,7 @@
     "link:schematic": "yarn link && cd sandbox && yarn link \"angular-fire-schematic\"",
     "sandbox:add": "cd sandbox && ng g angular-fire-schematic:add",
     "test": "yarn clean && yarn sandbox:add && yarn test:sandbox",
-    "test:ci": "yarn clean && cd sandbox && yarn && ng g angular-fire-schematic:add --apiKey='' --authDomain='' --databaseURL='' --projectId='' --storageBucket='' --messagingSenderId='' && yarn lint && yarn build",
+    "test:ci": "yarn clean && cd sandbox && yarn && ng g angular-fire-schematic:add --apiKey='' --authDomain='' --databaseURL='' --projectId='' --storageBucket='' --messagingSenderId='' --appId='' && yarn lint && yarn build",
     "test:unit": "yarn build && jasmine src/**/*_spec.js",
     "test:sandbox": "cd sandbox && yarn lint && yarn test && yarn build",
     "semantic-release": "semantic-release"

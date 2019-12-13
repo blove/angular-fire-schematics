@@ -19,4 +19,7 @@ export interface Schema {
 
   /** Firebase messaging sender ID. */
   messagingSenderId: string;
+
+  /** Firebase app ID. */
+  appId: string;
 }

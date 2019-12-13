@@ -5,14 +5,18 @@ import {
   SchematicContext,
   SchematicsException,
   Tree
-  } from '@angular-devkit/schematics';
+} from '@angular-devkit/schematics';
 import {
   addModuleImportToRootModule,
   getProjectFromWorkspace,
   getProjectMainFile,
   hasNgModuleImport
-  } from '@angular/cdk/schematics';
-import { getSourceNodes, insertImport, isImported } from '@schematics/angular/utility/ast-utils';
+} from '@angular/cdk/schematics';
+import {
+  getSourceNodes,
+  insertImport,
+  isImported
+} from '@schematics/angular/utility/ast-utils';
 import { InsertChange } from '@schematics/angular/utility/change';
 import { getWorkspace } from '@schematics/angular/utility/config';
 import { getAppModulePath } from '@schematics/angular/utility/ng-ast-utils';
@@ -54,6 +58,7 @@ function addEnvironmentConfig(options: Schema): Rule {
       `    projectId: '${options.projectId}',\n` +
       `    storageBucket: '${options.storageBucket}',\n` +
       `    messagingSenderId: '${options.messagingSenderId}',\n` +
+      `    appId: '${options.appId}',\n` +
       `  }`;
     const sourceFile = readIntoSourceFile(tree, envPath);
 
